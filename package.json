@@ -1,0 +1,48 @@
+{
+  "name": "taro-idb-keyval",
+  "version": "6.2.1",
+  "license": "LGPL-3.0",
+  "author": "shiy2008@gmail.com",
+  "description": "A minimal shim of idb-keyval for Taro framework",
+  "keywords": [
+    "web",
+    "standard",
+    "indexeddb",
+    "key-value",
+    "database",
+    "storage",
+    "shim",
+    "taro",
+    "mini-app"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idea2app/Taro-idb-keyval.git"
+  },
+  "bugs": {
+    "url": "https://github.com/idea2app/Taro-idb-keyval/issues"
+  },
+  "source": "index.ts",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "dependencies": {
+    "tslib": "^2.8.1"
+  },
+  "peerDependencies": {
+    "@tarojs/taro": ">=3"
+  },
+  "devDependencies": {
+    "@tarojs/taro": "^4.0.12",
+    "typescript": "^5.8.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@swc/core",
+      "esbuild"
+    ]
+  },
+  "scripts": {
+    "build": "rm -rf dist/  &&  tsc",
+    "prepublishOnly": "npm run build"
+  }
+}
